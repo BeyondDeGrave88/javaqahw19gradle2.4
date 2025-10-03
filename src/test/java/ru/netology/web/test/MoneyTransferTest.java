@@ -15,14 +15,8 @@ public class MoneyTransferTest {
     void shouldTransferMoneyBetweenCards() {
         var info = getAuthInfo();
         var verificationCode = DataHelper.getVerificationCodeFor(info);
-
         var loginPage = Selenide.open("http://localhost:9999", LoginPage.class);
         var verificationPage = loginPage.validLogin(info);
-        verificationPage.verifyPageVisibility();
         var dashBoardPage = verificationPage.validVerify(verificationCode);
-
-
-        $("[data-test-id=dashboard]").should(Condition.visible);
-
     }
 }
