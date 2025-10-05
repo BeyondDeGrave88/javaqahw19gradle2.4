@@ -4,10 +4,9 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.ElementsCollection;
 
-
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
-
 
 public class DashBoardPage {
     private final SelenideElement header = $("[data-test-id=dashboard]");
@@ -16,7 +15,11 @@ public class DashBoardPage {
     private final String balanceFinish = " р.";
 
     public DashBoardPage() {
-        header.should(Condition.visible);
+        header.should(visible);
+    }
+
+    public void verifyPageIsVisible() {
+        header.should(visible);
     }
 
     public int getCardBalance(String testId) {
