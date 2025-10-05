@@ -4,7 +4,7 @@ import lombok.Value;
 
 public class DataHelper {
 
-    private DataHelper(){
+    private DataHelper() {
 
     }
 
@@ -16,12 +16,12 @@ public class DataHelper {
         return new AuthInfo("petya", "123qwerty");
     }
 
-    public static VerificationCode getVerificationCodeFor(AuthInfo authInfo){
+    public static VerificationCode getVerificationCodeFor(AuthInfo authInfo) {
         return new VerificationCode("12345");
     }
 
     public static CardInfo getFirstCardInfo() {
-        return new CardInfo("5559 0000 0000 0001","92df3f1c-a033-48e6-8390-206f6b1f56c0");
+        return new CardInfo("5559 0000 0000 0001", "92df3f1c-a033-48e6-8390-206f6b1f56c0");
     }
 
     public static CardInfo getSecondCardInfo() {
@@ -44,5 +44,4 @@ public class DataHelper {
         String number;
         String testId;
     }
-
 }
