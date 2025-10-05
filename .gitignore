@@ -18,6 +18,7 @@ Thumbs.db*
 *.iml
 *.ipr
 out/
+target/
 
 ### VS Code ###
 .vscode/
